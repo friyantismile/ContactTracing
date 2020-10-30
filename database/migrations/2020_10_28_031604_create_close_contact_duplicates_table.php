@@ -38,6 +38,8 @@ class CreateCloseContactDuplicatesTable extends Migration
             $table->string("monthly_salary")->nullable();
             $table->string("is_asymptomatic")->nullable();
             $table->string("nature_of_contact")->nullable();
+            $table->string("risk_category")->nullable(); 
+            $table->string("guardian_fullname")->nullable(); 
             $table->string("contact_tracer_email")->nullable(); 
             $table->string("contact_tracer_time_in")->nullable(); 
             $table->dateTime("uploaded_on_excel_at")->nullable();

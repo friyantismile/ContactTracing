@@ -14,6 +14,6 @@ class CloseContactDuplicate extends Model
         'employment', 'family_size', 'exposed_to', 'nature_of_contact', 
         'last_exposed', 'monthly_salary', 'is_asymptomatic', 
         'contact_tracer_time_in', 'contact_tracer_email', 
-        'date_registered', 'date_encoded_on_app'
+        'date_registered', 'date_encoded_on_app', 'risk_category', 'guardian_fullname'
     ];
 }

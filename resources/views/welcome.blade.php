@@ -83,16 +83,20 @@
                 <div class="title m-b-md">
                     Laravel
                 </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                <div class="col-sm">
+                    <div class="list-group mt-3">
+                        @foreach($posts as $post)
+                            <div class="list-group-item list-group-item-action">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1">{{ data_get($post, 'name') }}</h5>
+                                </div>
+                                <p class="mb-1">
+                                    {{ data_get($post, 'age') }}
+                                </p>
+                                
+                            </div>
+                        @endforeach
+                    </div>
                 </div>
             </div>
         </div>
