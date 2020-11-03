@@ -72,7 +72,7 @@ class CloseContactService
             return "This close contact already exist on the database";
         }
 
-        $close_contact = new CloseContact;
+        $close_contact = new CloseContact();
         $close_contact->firstname = $request['fname'];
         $close_contact->lastname = $request['lname'];
         $close_contact->middlename = $request['mi'];

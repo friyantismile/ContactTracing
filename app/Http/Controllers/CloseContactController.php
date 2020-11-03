@@ -29,7 +29,7 @@ class CloseContactController extends Controller
      */
     public function index()
     {
-        $CloseContacts = $this->close_contact_service->getCloseContactsBy('city_id', $city_id);
+        $CloseContacts = $this->close_contact_service->getAll();
 
         return $this->successResourceResponse(
             CloseContactResources::collection($CloseContacts),

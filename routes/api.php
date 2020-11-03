@@ -23,7 +23,3 @@ Route::get('close-contacts', 'CloseContactController@index')->name('close-contac
 Route::group(['prefix' => 'close-contact'], function () {
     Route::post('save', 'CloseContactController@create')->name('close-contact-create');
 });
-
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});

@@ -32,7 +32,7 @@ class CreateCloseContactDuplicatesTable extends Migration
             $table->string("education_attainment")->nullable();
             $table->string("employment")->nullable();
             $table->integer("family_size")->nullable();
-            $table->string("exposed_to");
+            $table->string("exposed_to")->nullable();
             $table->date("last_exposed")->nullable();
             $table->date("date_encoded_on_app")->nullable();
             $table->string("monthly_salary")->nullable();

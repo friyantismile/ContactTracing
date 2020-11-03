@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\LoginRequest;
 use App\Services\AuthService;
 use App\Traits\HandleResponse;
+use App\Http\Resources\User;
 use Exception;
 
 /**
@@ -58,6 +59,11 @@ class AuthController extends Controller
             );
             $this->auth_service->logout();
         }
-        return $auth;
+        
+        return $this->successResponse(
+            new User($auth),
+            "You've been successfully logged-in",
+            config('responses.create_success.code')
+        );
     }
 }
