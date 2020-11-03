@@ -21,7 +21,7 @@ class CloseContact extends JsonResource
             'middlename'            => $this->middlename,
             'lastname'              => $this->lastname,
             'contact_no'            => $this->contact_no,
-            'image'                 => $this->image ? url("/images/advertisements/" . $this->image)  : url('/images/empty.png'),
+            'image'                 => $this->image ? url("/images/close-contacts/" . $this->image)  : url('/images/empty.png'),
             'birthdate'             => $this->birthdate,
             'civil_status'          => $this->civil_status,
             'sex'                   => $this->sex,

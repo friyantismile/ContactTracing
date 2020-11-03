@@ -21,15 +21,19 @@ class FileService
      */
     public function uploadImage($image_data, $folder_name, $prefix = null, $suffix = null)
     {
+       
         try {
             $path = public_path().'/images/'.$folder_name;
+           
             if(!File::exists($path)) {
                 File::makeDirectory($path, $mode = 0755, true, true);
             }
             $image = ($prefix ? $prefix.'-' : '') . time() . ($suffix ? '-' . $suffix : '') . '.' . explode('/', explode(':', substr($image_data, 0, strpos($image_data, ';')))[1])[1];
+            
             Image::make($image_data)->save(public_path('images/'.$folder_name.'/') . $image, 75, 'jpg');
             return $image;
         } catch (Exception $ex) {
+            //dd($ex);
             return false;
         }
     }
